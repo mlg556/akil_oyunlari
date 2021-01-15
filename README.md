@@ -30,4 +30,4 @@ yes
 
 ```
 
-İstenilen başka bir bulmacayı için `main` fonksiyonuna `cozum[["KELIME1", +SAYISI, -SAYISI], ["KELIME2", +SAYISI, -SAYISI] ... ]` şeklinde ekleyebilirsiniz.
+İstenilen başka bir bulmacayı çözmek için `main` fonksiyonuna `cozum[["KELIME1", +SAYISI, -SAYISI], ["KELIME2", +SAYISI, -SAYISI] ... ]` şeklinde ekleyebilirsiniz.
