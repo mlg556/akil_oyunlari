@@ -1,0 +1,49 @@
+import cp. 
+
+toNum(Str) = map(ord, Str).
+toWord(Ls) = map(chr, Ls).
+
+cozum([A, B, C ,D]) ?=>
+    W1 = toNum(A[1]),
+    W1P = A[2],
+    W1M = A[3],
+
+    W2 = toNum(B[1]),
+    W2P = B[2],
+    W2M = B[3],
+
+    W3 = toNum(C[1]),
+    W3P = C[2],
+    W3M = C[3],
+
+    W4 = toNum(D[1]),
+    W4P = D[2],
+    W4M = D[3],
+
+    X = new_list(4),
+    X :: ord('A')..ord('Z'),
+    all_different(X),
+    
+    sum([cond(X[I] #= W1[I], 1,0) : I in 1..4]) #= W1P,
+    sum([cond((X[I] :: W1), 1,0) : I in 1..4]) #= W1P + W1M,
+
+    sum([cond(X[I] #= W2[I], 1,0) : I in 1..4]) #= W2P,
+    sum([cond((X[I] :: W2), 1,0) : I in 1..4]) #= W2P + W2M,
+
+    sum([cond(X[I] #= W3[I], 1,0) : I in 1..4]) #= W3P,
+    sum([cond((X[I] :: W3), 1,0) : I in 1..4]) #= W3P + W3M,
+
+    sum([cond(X[I] #= W4[I], 1,0) : I in 1..4]) #= W4P,
+    sum([cond((X[I] :: W4), 1,0) : I in 1..4]) #= W4P + W4M,
+
+    solve(X++W1++W2++W3++W4),
+    println("cevap => "++toWord(X)),
+    nl.
+
+
+main =>
+    % Ornek
+    cozum([["SEMT",1,0], ["DERS",1,1], ["OTUZ",0,2], ["SOBA",2,0]]),
+
+    % No: 1910
+    cozum([["PIST", 2,0], ["STOK",0,2], ["MOLA",2,0], ["CAKI",0,1]]).
