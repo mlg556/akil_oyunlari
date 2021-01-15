@@ -4,6 +4,7 @@ Burada [Akıl oyunları](https://akiloyunlari.griceviz.com/questions) sitesindek
 
 ## Sözcük Tahmini
 > Dört farklı harften oluşan bir sözcüğü bulmak için tablodaki tahminler yapılmıştır. Tahminlerin yanındaki her “+” işareti, doğru yerde bulunan bir harfe, her “-“ işareti ise yanlış yerde bulunan bir harfe karşılık gelmektedir. Bu bilgileri kullanarak sözcüğü bulunuz.
+
 > Örnek : ![](ornek.jpg).
 
 `sozcuk_tahmini.pi` dosyasında 4 harfli kelimeler için genel çözüm bulunmaktadır. Yürütmek için için aynı dizinde `picat`'ı çalıştırıp, sonra`cl('sozcuk_tahmini').` ile dosyayı yükleyip `main.` ile ana fonksiyonu çalıştırabilirsiniz:
